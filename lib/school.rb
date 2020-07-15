@@ -1,5 +1,5 @@
 # code here!
-
+require 'pry'
 
 class School
     attr_reader :name
@@ -23,9 +23,13 @@ class School
     end
 
     def sort
+        sorted_roster = {}
         roster.each do |grade, students|
-            students.sort!
+            sorted_roster[grade] = students.sort
+            
         end
+        sorted_roster
     end
+    
 end
 
